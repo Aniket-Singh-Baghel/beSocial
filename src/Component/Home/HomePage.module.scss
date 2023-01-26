@@ -1,0 +1,361 @@
+$background1: #cce3de;
+$background2: #eaf4f4;
+$fontColor: #2c3a34;
+$boxShadow: -2px 3px 21px 15px rgba(149, 177, 182, 0.467),
+    -2px 3px 21px 15px rgba(149, 177, 182, 0.467),
+    -2px 3px 21px 15px rgba(149, 177, 182, 0.467);
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.main {
+    width: 100vw;
+    height: 100vh;
+    background-color: $background1;
+    border: 1px solid transparent;
+    color: $fontColor;
+}
+
+.half {
+    background-color: yellow;
+}
+
+.main_box {
+    width: 50vw;
+    height: 70vh;
+    margin: 8vmax auto;
+    display: flex;
+    box-shadow: $boxShadow
+}
+
+.left_child {
+    width: 50%;
+    height: 100%;
+    background-color: $background2;
+    padding-left: 2vmax;
+    position: relative;
+}
+
+.right_child {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+
+    .image_div {
+        height: 100%;
+        width: 100%;
+    }
+
+    .main_image {
+
+        height: 70vh;
+        width: 100%;
+    }
+
+}
+
+
+.logo {
+    width: 10vmax;
+    height: 2vmax;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: -1vmax;
+
+    img {
+        height: 1.5vmax;
+    }
+
+    .logo_name {
+        font: 500 1.1vmax "product sans";
+        margin-left: .2vmax;
+    }
+}
+
+
+.welcome_window {
+    font-family: "Segoe UI";
+    width: 30vmax;
+    position: absolute;
+    top: 15%;
+    left: -5%;
+
+    h4 {
+        margin: auto 20%;
+        font: 600 1.5vmax "Segoe UI";
+    }
+
+    p {
+        font-size: .8rem;
+        margin: 2% 16.5%;
+        font: 200 .9vmax "product sans";
+    }
+}
+
+
+
+.google_login {
+    border: .1vmax solid rgba(144, 144, 144, 0.596);
+    border-radius: .5vmax;
+    margin: 40% 5%;
+    display: flex;
+    width: 17vmax;
+    padding: .5vmax 1.5vmax;
+    justify-items: center;
+
+    p {
+        margin-left: 1vmax;
+    }
+}
+
+
+
+.logo_image {
+    height: 1.5vmax;
+    margin-left: 1vmax;
+}
+
+.or {
+    width: 17vmax;
+    height: 2vmax;
+    margin: -40% 5%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    .left_line {
+        width: 8vmax;
+        height: .01vmax;
+        background: rgba(144, 144, 144, 0.431);
+    }
+
+    p {
+        margin: 0vmax .5vmax;
+        color: rgba(122, 122, 122, 0.857);
+    }
+
+    .right_line {
+        width: 8vmax;
+        height: .01vmax;
+        background: rgba(144, 144, 144, 0.431);
+    }
+}
+
+.login_details {
+    margin: 45% 5%;
+    width: 17vmax;
+    height: 12vmax;
+    // border: 1px solid black;
+
+    .input_fields {
+        width: 100%;
+        height: 22%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        position: relative;
+
+        input {
+            height: 100%;
+            width: 100%;
+            border: none;
+            outline: none;
+            border-bottom: .1vmax solid rgba(144, 144, 144, 0.431);
+            font-size: 1.1vmax;
+            background-color: $background2;
+        }
+
+        .input_label {
+            position: absolute;
+            // bottom: 10px;
+            left: 0;
+            color: grey;
+            pointer-events: none;
+            transition: all 0.3s ease;
+        }
+
+        input:focus~label,
+        input:valid~label {
+            transform: translateY(-1.5vmax);
+            color: #4158d0;
+        }
+
+        .underline {
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .underline:before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 0%;
+            background: #4158d0;
+            transform: scaleX(0);
+            transform-origin: center;
+            transition: transform 0.3s ease;
+        }
+
+        input:focus~.underline:before,
+        input:valid~.underline:before {
+            transform: scaleX(1);
+            width: 100%;
+        }
+    }
+
+    :nth-child(2) {
+        margin-top: 10%;
+    }
+
+    .remember {
+        width: 100%;
+        border: 1px solid grey;
+        height: 1vmax;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        position: relative;
+        margin: .5vmax 0;
+        border: none;
+
+        p {
+            margin-top: .2vmax;
+            margin-left: .5vmax;
+            font-size: .9vmax;
+        }
+
+        h6 {
+            position: absolute;
+            right: 0;
+            font-weight: normal;
+        }
+
+
+    }
+
+    button {
+        width: 17vmax;
+        height: 2.3vmax;
+        margin: 5% auto;
+        outline: none;
+        border: none;
+        background-color: #111727;
+        color: aliceblue;
+        border-radius: .7vmax;
+        cursor: pointer;
+    }
+}
+
+.signup_message {
+    width: 17vmax;
+    margin: -42% 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+        font-size: .8vmax;
+    }
+
+    h6 {
+        margin-left: .3vmax;
+        font-size: .7vmax;
+        cursor: pointer;
+    }
+}
+
+.signup_png {
+    height: 1vmax;
+    position: absolute;
+    top: 87%;
+    left: 52%;
+    transform: rotate(7deg);
+    opacity: 0.7;
+}
+
+.content {
+    position: absolute;
+    top: 30rem;
+    left: 0rem;
+    width: 100%;
+    color: #fff;
+    padding-left: 1rem;
+    background: rgba(0, 0, 0, 0.3);
+    animation: slide-up 1s ease 0.5s;
+    // animation-delay: 1s;
+    transform: translateX(0);
+    transition: all 0.5s ease;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+
+    .desc {
+        width: 100%;
+        padding-top: 1rem;
+        font-size: 1.5vmax;
+    }
+
+    .bottom_content {
+        display: flex;
+    }
+
+    .left_content {
+        width: 70%;
+        height: 5vmax;
+        line-height: 1.8vmax;
+        position: absolute;
+        bottom: 4vmax;
+
+        // background-color: red;
+        .name_rating {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .developer_name {
+            font-size: 1.3vmax;
+            font-weight: 600;
+        }
+
+        .role {
+            font-size: 1vmax;
+        }
+
+        .place {
+            font-size: .9vmax;
+        }
+    }
+
+    .right_content {
+        width: 10vmax;
+        height: 5vmax;
+
+    }
+}
+
+@keyframes slide-up {
+    0% {
+        visibility: visible;
+        top: 23rem;
+    }
+
+    100% {
+        visibility: visible;
+        top: 17rem;
+    }
+}
+
+
+
+.content>* {
+    margin-bottom: 3vmax;
+}

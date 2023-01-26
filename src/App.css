@@ -1,10 +1,32 @@
-.App {
-  text-align: center;
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
 }
+html,body{
+    height: 100%;
+    width: 100%;
+    background-color: #ADEFD1FF;
+    display: grid;
+    place-items: center;
+    color: WHITE;
+}
+/* .App {
+  display: flex;
+  padding: 1vh;
+  font-family: 'product sans';
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(204, 100, 100);
+} */
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+input{
+  padding: 1vh;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -27,6 +49,67 @@
 .App-link {
   color: #61dafb;
 }
+#exp{
+  height: 90vh;
+  position: relative;
+  width: 80vmin;
+  background-color: #00203fff;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 9px 11px 34px -5px rgba(0,0,0,0.43);
+  -webkit-box-shadow: 9px 11px 34px -5px rgba(0,0,0,0.43);
+  -moz-box-shadow: 9px 11px 34px -5px rgba(0,0,0,0.43);
+}
+
+hr{
+  background-color: black;
+}
+
+#mi{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main{
+  width: 100%;
+  /* display: flex;
+  align-items: center; */
+  padding: 1.5vh;
+  margin-top: 10px;
+  background-color: rgba(0, 128, 255, 0.666);
+  outline: none;
+  border: .1vh solid black;
+}
+.divp{
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin-left: 3vmin;
+  background-color: rgb(255, 255, 255);
+}
+.color{
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  /* background-color: red; */
+}
+
+h2{
+  font-size: 4.5vmin;
+  /* text-align: center; */
+  margin-left: 3vmin;
+}
+h4{
+    position: absolute;
+    top: 6vmin;
+    right: 4vmax;
+    font-size: 2.5vmin
+}
+hr{
+  color: #282c34;
+}
 
 @keyframes App-logo-spin {
   from {
@@ -35,4 +118,16 @@
   to {
     transform: rotate(360deg);
   }
+}
+button{
+  cursor: pointer;
+}
+@media screen and (max-width:500px) {
+    h2{
+      font-size: 20px;
+    }
+    h4{
+      margin-top: 2vmin;
+      margin-left: -20vmin;
+    }
 }
